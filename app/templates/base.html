@@ -21,7 +21,7 @@
     <body>
 
         <!-- TODO: insert navbar code here -->
-
+        {% include 'includes/navbar.html' %}
         {% with messages = get_flashed_messages(with_categories=true)%}
             {%if messages%}
                 {% for category,message in messages%}
@@ -41,6 +41,7 @@
         {% endwith %}
 
         <!-- TODO: insert <section> tag code here -->
-
+        {% block body %}
+        {% endblock body %}
     </body>
 </html>
